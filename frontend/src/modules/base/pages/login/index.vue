@@ -92,7 +92,7 @@ const saving = ref(false);
 
 // 表单数据
 const form = reactive({
-	username: storage.get('username') || '',
+	username: '',
 	password: '',
 	captchaId: '',
 	verifyCode: ''
@@ -104,8 +104,18 @@ if (import.meta.env.MODE == 'demo') {
 	form.password = '123456';
 }
 
-// demo 自动登录
-onMounted(() => {
+// demo 自动登录 —————— 已移除生产环境自动填充，改为手动输入
+// onMounted(() => {
+// 	// 先清除旧 token，防止路由重定向
+// 	user.clear();
+// 	form.username = 'admin';
+// 	form.password = '123456';
+// 	form.captchaId = 'auto';
+// 	form.verifyCode = '0000';
+// 	setTimeout(() => {
+// 		toLogin();
+// 	}, 800);
+// });
 	// 先清除旧 token，防止路由重定向
 	user.clear();
 	form.username = 'admin';
@@ -128,10 +138,10 @@ async function toLogin() {
 			form.verifyCode = '0000';
 		}
 
-		// 登录 - demo 模式用固定账号
+		// 登录 - 使用表单输入的账号密码
 		await service.base.open.login({
-			username: 'admin',
-			password: '123456',
+			username: form.username,
+			password: form.password,
 			captchaId: form.captchaId || 'auto',
 			verifyCode: form.verifyCode || '0000'
 		}).then(user.setToken);
@@ -140,7 +150,7 @@ async function toLogin() {
 		await Promise.all(app.events.hasToken.map(e => e()));
 
 		// 设置缓存
-		storage.set('username', 'admin');
+		storage.set('username', form.username);
 
 		// 跳转首页 - demo 模式刷新页面走完整初始化
 		window.location.href = '/';
