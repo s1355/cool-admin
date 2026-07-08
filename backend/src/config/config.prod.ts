@@ -10,7 +10,7 @@ export default {
     dataSource: {
       default: {
         type: 'mysql',
-        host: '38.147.172.28',
+        host: '127.0.0.1',
         port: 3306,
         username: 'cool-admin',
         password: '7dz2ssmWSNWfsAbK',
