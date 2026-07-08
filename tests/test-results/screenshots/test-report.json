@@ -1,0 +1,160 @@
+{
+  "testDate": "2026-05-11T01:04:35.180Z",
+  "project": "Password Generator Pro",
+  "url": "http://localhost:8899",
+  "summary": {
+    "total": 36,
+    "passed": 0,
+    "failed": 36,
+    "passRate": "0.0%"
+  },
+  "testCases": [
+    {
+      "name": "TC-01: 页面正常加载",
+      "status": "pending"
+    },
+    {
+      "name": "TC-02: 默认状态检查 - 密码未生成时按钮应禁用",
+      "status": "pending"
+    },
+    {
+      "name": "TC-03: 密码生成 - 点击生成按钮应产生密码",
+      "status": "pending"
+    },
+    {
+      "name": "TC-04: 复制功能 - 点击复制按钮",
+      "status": "pending"
+    },
+    {
+      "name": "TC-05: 重新生成 - 两次生成的密码应不同",
+      "status": "pending"
+    },
+    {
+      "name": "TC-06: 长度滑块 - 调整密码长度",
+      "status": "pending"
+    },
+    {
+      "name": "TC-07: 字符类型切换 - 关闭大写字母",
+      "status": "pending"
+    },
+    {
+      "name": "TC-08: 至少保留一种字符类型",
+      "status": "pending"
+    },
+    {
+      "name": "TC-09: 批量生成功能",
+      "status": "pending"
+    },
+    {
+      "name": "TC-10: 批量生成 - 复制全部",
+      "status": "pending"
+    },
+    {
+      "name": "TC-11: 最小长度 (4)",
+      "status": "pending"
+    },
+    {
+      "name": "TC-12: 最大长度 (128)",
+      "status": "pending"
+    },
+    {
+      "name": "TC-13: 排除易混淆字符",
+      "status": "pending"
+    },
+    {
+      "name": "TC-14: 只选择数字类型",
+      "status": "pending"
+    },
+    {
+      "name": "TC-15: 批量生成边界 - 输入0",
+      "status": "pending"
+    },
+    {
+      "name": "TC-16: 批量生成边界 - 输入超过20",
+      "status": "pending"
+    },
+    {
+      "name": "TC-17: 密码强度计算 - 极弱密码 (长度4, 仅数字)",
+      "status": "pending"
+    },
+    {
+      "name": "TC-18: 密码强度计算 - 极强密码 (长度128, 全类型)",
+      "status": "pending"
+    },
+    {
+      "name": "TC-19: 主题切换 - 亮色到暗色",
+      "status": "pending"
+    },
+    {
+      "name": "TC-20: 主题切换 - 暗色回到亮色",
+      "status": "pending"
+    },
+    {
+      "name": "TC-21: 主题持久化",
+      "status": "pending"
+    },
+    {
+      "name": "TC-22: 收藏按钮 - 将密码添加到历史",
+      "status": "pending"
+    },
+    {
+      "name": "TC-23: 历史记录删除",
+      "status": "pending"
+    },
+    {
+      "name": "TC-24: 清空历史记录",
+      "status": "pending"
+    },
+    {
+      "name": "TC-25: 历史记录 localStorage 持久化",
+      "status": "pending"
+    },
+    {
+      "name": "TC-26: 历史记录最多10条",
+      "status": "pending"
+    },
+    {
+      "name": "TC-27: 历史记录包含正确元数据",
+      "status": "pending"
+    },
+    {
+      "name": "TC-28: 主题设置持久化到 localStorage",
+      "status": "pending"
+    },
+    {
+      "name": "TC-29: 批量生成的密码不重复",
+      "status": "pending"
+    },
+    {
+      "name": "TC-30: 生成的密码包含所选字符类型",
+      "status": "pending"
+    },
+    {
+      "name": "TC-31: 使用 crypto API (密码学安全随机)",
+      "status": "pending"
+    },
+    {
+      "name": "TC-32: 密码不在 URL 中暴露",
+      "status": "pending"
+    },
+    {
+      "name": "TC-33: 无控制台错误",
+      "status": "pending"
+    },
+    {
+      "name": "TC-34: 预览强度随滑块变化",
+      "status": "pending"
+    },
+    {
+      "name": "TC-35: 批量生成单项复制",
+      "status": "pending"
+    },
+    {
+      "name": "TC-36: 历史记录单项复制",
+      "status": "FAIL",
+      "error": "browser.newContext: Target page, context or browser has been closed"
+    }
+  ],
+  "defects": [],
+  "consoleErrors": []
+}

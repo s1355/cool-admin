@@ -1,0 +1,547 @@
+<template>
+	<!-- 电影管理页面 - CRUD 列表页 -->
+	<cl-crud ref="Crud">
+		<cl-row>
+			<!-- 刷新按钮 -->
+			<cl-refresh-btn />
+			<!-- 新增按钮 -->
+			<cl-add-btn />
+			<!-- 批量删除按钮 -->
+			<cl-multi-delete-btn />
+			<cl-flex1 />
+			<!-- 分类筛选 -->
+			<cl-select
+				:options="categoryOptions"
+				prop="categoryId"
+				:width="140"
+				placeholder="分类筛选"
+				clearable
+			/>
+			<!-- 质量筛选 -->
+			<cl-select
+				:options="qualityOptions"
+				prop="quality"
+				:width="120"
+				placeholder="质量筛选"
+				clearable
+			/>
+			<!-- 是否已看筛选 -->
+			<cl-select
+				:options="watchedOptions"
+				prop="watched"
+				:width="120"
+				placeholder="已看筛选"
+				clearable
+			/>
+			<!-- 关键字搜索（按名称、导演、主要人物） -->
+			<cl-search-key placeholder="搜索名称、导演" />
+		</cl-row>
+
+		<cl-row>
+			<!-- 数据表格 -->
+			<cl-table ref="Table" />
+		</cl-row>
+
+		<cl-row>
+			<cl-flex1 />
+			<!-- 分页 -->
+			<cl-pagination />
+		</cl-row>
+
+		<!-- 新增、编辑弹窗 -->
+		<cl-upsert ref="Upsert" />
+	</cl-crud>
+</template>
+
+<script lang="ts" setup>
+defineOptions({
+	name: 'film'
+});
+
+import { useCrud, useTable, useUpsert } from '@cool-vue/crud';
+import { useCool } from '/@/cool';
+import { reactive, ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const { service } = useCool();
+const router = useRouter();
+
+// 质量评级选项 - 用于表格字典渲染、表单下拉选择、搜索筛选
+const qualityOptions = reactive([
+	{ label: 'S级', value: 'S', type: 'danger' },
+	{ label: 'A级', value: 'A', type: 'warning' },
+	{ label: 'B级', value: 'B', type: 'success' },
+	{ label: 'C级', value: 'C', type: 'info' }
+]);
+
+// 是否已看选项 - 用于表格字典渲染、搜索筛选
+const watchedOptions = reactive([
+	{ label: '已看', value: true, type: 'success' },
+	{ label: '未看', value: false, type: 'info' }
+]);
+
+// 分类选项 - 从接口获取
+const categoryOptions = ref<any[]>([]);
+
+// API: service.knowledge.film - 电影服务（由 EPS 自动生成，对应后端 /admin/knowledge/film）
+// API: service.knowledge.filmCategory - 电影分类服务（对应后端 /admin/knowledge/film-category）
+
+function parsePosters(posters: any): { src: string; previewList: string[] } {
+	if (Array.isArray(posters) && posters.length > 0) {
+		return { src: posters[0], previewList: posters };
+	}
+
+	if (typeof posters === 'string' && posters) {
+		try {
+			const parsed = JSON.parse(posters);
+			if (Array.isArray(parsed) && parsed.length > 0) {
+				return { src: parsed[0], previewList: parsed };
+			}
+			if (parsed) {
+				return { src: parsed, previewList: [parsed] };
+			}
+		} catch (e) {
+			return { src: posters, previewList: [posters] };
+		}
+	}
+
+	return { src: '', previewList: [] };
+}
+
+// cl-crud 配置
+const Crud = useCrud({ service: service.knowledge.film }, app => {
+	// 加载分类数据
+	loadCategoryOptions();
+	// 首次加载时刷新数据
+	app.refresh();
+});
+
+// 加载分类选项
+function loadCategoryOptions() {
+	service.knowledge.filmCategory.list().then((res: any) => {
+		categoryOptions.value = res.map((item: any) => ({
+			label: item.name,
+			value: item.id
+		}));
+	});
+}
+
+// cl-table 配置 - 表格列定义
+const Table = useTable({
+	columns: [
+		{
+			// 多选框列
+			type: 'selection',
+			width: 60
+		},
+		{
+			// 海报 - 显示第一张缩略图
+			label: '海报',
+			prop: 'posters',
+			width: 90,
+			component: {
+				name: 'el-image',
+				props({ scope }: any) {
+					const { src, previewList } = parsePosters(scope?.posters);
+					return {
+						src,
+						style: 'width: 60px; height: 80px; border-radius: 4px;',
+						fit: 'cover',
+						previewTeleported: true,
+						previewSrcList: previewList
+					};
+				}
+			}
+		},
+		{
+			// 名称
+			label: '名称',
+			prop: 'name',
+			minWidth: 200,
+			showOverflowTooltip: true
+		},
+		{
+			// 导演
+			label: '导演',
+			prop: 'director',
+			minWidth: 120,
+			showOverflowTooltip: true
+		},
+		{
+			// 年份
+			label: '年份',
+			prop: 'year',
+			width: 90
+		},
+		{
+			// 分类 - 显示分类名称
+			label: '分类',
+			prop: 'categoryId',
+			width: 120,
+			dict: categoryOptions
+		},
+		{
+			// 质量评级 - 显示标签样式
+			label: '质量评级',
+			prop: 'quality',
+			width: 100,
+			dict: qualityOptions,
+			dictColor: true
+		},
+		{
+			// 豆瓣评分
+			label: '豆瓣评分',
+			prop: 'doubanRating',
+			width: 100
+		},
+		{
+			// 是否已看 - 显示标签样式
+			label: '是否已看',
+			prop: 'watched',
+			width: 100,
+			dict: watchedOptions,
+			dictColor: true
+		},
+		{
+			// 个人评分
+			label: '个人评分',
+			prop: 'personalRating',
+			width: 100
+		},
+		{
+			// 创建时间
+			label: '创建时间',
+			prop: 'createTime',
+			minWidth: 170,
+			sortable: 'desc'
+		},
+		{
+			// 操作列 - 详情、编辑、删除
+			type: 'op',
+			width: 280,
+			buttons: [
+				{
+					label: '详情',
+					type: 'primary',
+					onClick({ scope }: any) {
+						// 跳转到详情页
+						router.push(`/knowledge/film/${scope.row.id}`);
+					}
+				},
+				'edit',
+				'delete'
+			]
+		}
+	]
+});
+
+// cl-upsert 配置 - 新增/编辑表单
+const Upsert = useUpsert({
+	dialog: {
+		width: '900px'
+	},
+
+	items: [
+		// Tabs 分组配置
+		{
+			type: 'tabs',
+			props: {
+				labels: [
+					{ label: '基础信息', value: 'base' },
+					{ label: '海报上传', value: 'posters' },
+					{ label: '评分信息', value: 'rating' },
+					{ label: '详细信息', value: 'detail' }
+				]
+			}
+		},
+
+		// ========== 基础信息 ==========
+		{
+			group: 'base',
+			label: '名称',
+			prop: 'name',
+			required: true,
+			component: {
+				name: 'el-input',
+				props: {
+					placeholder: '请输入电影名称',
+					maxlength: 200,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '分类',
+			prop: 'categoryId',
+			required: true,
+			component: {
+				name: 'el-select',
+				props: {
+					placeholder: '请选择分类',
+					clearable: true
+				},
+				options: categoryOptions
+			}
+		},
+		{
+			group: 'base',
+			label: '导演',
+			prop: 'director',
+			span: 12,
+			component: {
+				name: 'el-input',
+				props: {
+					placeholder: '请输入导演姓名',
+					maxlength: 100
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '年份',
+			prop: 'year',
+			span: 12,
+			component: {
+				name: 'el-input-number',
+				props: {
+					min: 1900,
+					max: 2100,
+					placeholder: '请输入年份'
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '国家',
+			prop: 'country',
+			span: 12,
+			component: {
+				name: 'el-input',
+				props: {
+					placeholder: '请输入国家/地区',
+					maxlength: 50
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '语言',
+			prop: 'language',
+			span: 12,
+			component: {
+				name: 'el-input',
+				props: {
+					placeholder: '请输入语言',
+					maxlength: 50
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '质量评级',
+			prop: 'quality',
+			span: 12,
+			component: {
+				name: 'el-select',
+				props: {
+					placeholder: '请选择质量评级',
+					clearable: true
+				},
+				options: qualityOptions
+			}
+		},
+		{
+			group: 'base',
+			label: '是否已看',
+			prop: 'watched',
+			span: 12,
+			value: false,
+			component: {
+				name: 'el-switch',
+				props: {
+					activeText: '已看',
+					inactiveText: '未看'
+				}
+			}
+		},
+		{
+			group: 'base',
+			label: '个人评分',
+			prop: 'personalRating',
+			span: 12,
+			component: {
+				name: 'el-input-number',
+				props: {
+					min: 0,
+					max: 10,
+					step: 0.1,
+					precision: 1,
+					placeholder: '0-10分'
+				}
+			}
+		},
+
+		// ========== 海报上传 ==========
+		{
+			group: 'posters',
+			label: '海报',
+			prop: 'posters',
+			value: [],
+			component: {
+				name: 'cl-upload-space',
+				props: {
+					text: '选择海报图片',
+					limit: 10,
+					multiple: true
+				}
+			}
+		},
+
+		// ========== 评分信息 ==========
+		{
+			group: 'rating',
+			label: '豆瓣评分',
+			prop: 'doubanRating',
+			span: 12,
+			component: {
+				name: 'el-input-number',
+				props: {
+					min: 0,
+					max: 10,
+					step: 0.1,
+					precision: 1,
+					placeholder: '0-10分'
+				}
+			}
+		},
+		{
+			group: 'rating',
+			label: 'TMDB评分',
+			prop: 'tmdbRating',
+			span: 12,
+			component: {
+				name: 'el-input-number',
+				props: {
+					min: 0,
+					max: 10,
+					step: 0.1,
+					precision: 1,
+					placeholder: '0-10分'
+				}
+			}
+		},
+
+		// ========== 详细信息 ==========
+		{
+			group: 'detail',
+			label: '主要人物',
+			prop: 'mainCharacters',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 3,
+					placeholder: '请输入主要人物信息',
+					maxlength: 500,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '内容简介',
+			prop: 'synopsis',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 6,
+					placeholder: '请输入内容简介',
+					maxlength: 2000,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '背景故事',
+			prop: 'backgroundStory',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 6,
+					placeholder: '请输入背景故事',
+					maxlength: 2000,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '荣誉',
+			prop: 'honors',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 4,
+					placeholder: '请输入获奖荣誉信息',
+					maxlength: 1000,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '亮点所在',
+			prop: 'highlights',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 4,
+					placeholder: '请输入影片亮点',
+					maxlength: 1000,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '为什么值得一看',
+			prop: 'whyWorthWatching',
+			component: {
+				name: 'el-input',
+				props: {
+					type: 'textarea',
+					rows: 6,
+					placeholder: '请输入推荐理由',
+					maxlength: 2000,
+					showWordLimit: true
+				}
+			}
+		},
+		{
+			group: 'detail',
+			label: '链接',
+			prop: 'link',
+			component: {
+				name: 'el-input',
+				props: {
+					placeholder: '请输入相关链接',
+					maxlength: 500
+				}
+			}
+		}
+	],
+
+	onOpen() {
+		// 打开弹窗时确保分类选项已加载
+		if (categoryOptions.value.length === 0) {
+			loadCategoryOptions();
+		}
+	}
+});
+</script>

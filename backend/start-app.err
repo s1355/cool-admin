@@ -1,0 +1,387 @@
+2026-07-05 12:24:27.965 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:24:28.189 ERROR 21920 NotFoundError: /upload/doesnotexist.jpg Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:73:16 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:25:13.899 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:25:31.264 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:25:31.269 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:25:31.273 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:26:08.947 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:27:02.766 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:27:42.187 ERROR 21920 MidwayValidationError: "captchaId" is required
+    at ValidateService.validateWithSchema (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\service.js:47:19)
+    at ValidateService.validate (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\service.js:31:21)
+    at ValidationPipe.validate (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\pipe.js:32:45)
+    at ValidationPipe.transform (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\pipe.js:60:21)
+    at Object.before (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\decoratorService.js:126:73)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Clz.<computed> (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\aspectService.js:87:21)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\common\webGenerator.js:43:26
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13 {
+  code: 'VALIDATE_10000',
+  cause: [Error [ValidationError]: "captchaId" is required] {
+    _original: LoginDTO { username: 'admin', password: '123456' },
+    details: [ [Object] ]
+  },
+  status: 422
+}
+2026-07-05 12:27:42.211 ERROR 21920 CoolCommException: 登录失效或无权限访问~
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:107:27
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:30
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at UploadMiddleware.execUpload (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:75:20)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\upload\dist\middleware.js:66:29
+    at fn (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:64:36)
+    at dispatch (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\middlewareService.js:103:48)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:23
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5) {
+  status: 1001,
+  statusCode: 401
+}
+2026-07-05 12:27:59.103 ERROR 21920 MidwayValidationError: "captchaId" is required
+    at ValidateService.validateWithSchema (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\service.js:47:19)
+    at ValidateService.validate (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\service.js:31:21)
+    at ValidationPipe.validate (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\pipe.js:32:45)
+    at ValidationPipe.transform (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\validate\dist\pipe.js:60:21)
+    at Object.before (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\decoratorService.js:126:73)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Clz.<computed> (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\service\aspectService.js:87:21)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\common\webGenerator.js:43:26
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13 {
+  code: 'VALIDATE_10000',
+  cause: [Error [ValidationError]: "captchaId" is required] {
+    _original: LoginDTO { username: 'admin', password: '123456' },
+    details: [ [Object] ]
+  },
+  status: 422
+}
+2026-07-05 12:28:49.477 ERROR 21920 NotFoundError: /admin/knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:28:59.619 ERROR 21920 NotFoundError: /admin/knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:23.882 ERROR 21920 NotFoundError: /admin/knowledge/book/page Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:23.888 ERROR 21920 NotFoundError: /admin/knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:23.894 ERROR 21920 NotFoundError: /admin/knowledge/book/page Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:24.211 ERROR 21920 NotFoundError: /knowledge/book/page Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:24.226 ERROR 21920 NotFoundError: /knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:37.021 ERROR 21920 NotFoundError: /admin/knowledge/book/page Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:37.025 ERROR 21920 NotFoundError: /admin/knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:50.626 ERROR 21920 NotFoundError: /admin/knowledge/book/page Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:29:50.784 ERROR 21920 NotFoundError: /admin/knowledge/book/list Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 12:41:33.407 ERROR 21920 NotFoundError: /api/admin/knowledge/book/cover/7 Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:41:56 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 13:20:55.031 ERROR 21920 NotFoundError: /upload/20260701/4da99f7a280467c5fbe3c5c761555d7f_a8def59b5d2c4c8a8f3dd700d1e99deb.jpg Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:73:16 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 13:20:55.035 ERROR 21920 NotFoundError: /upload/20260701/4_accffb5d858247cab5b61d5bb08cede9.jpg Not Found
+    at notFound (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\koa\dist\framework.js:137:23)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:110:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17
+    at async bodyParser (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-bodyparser\index.js:78:5)
+    at async session (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\session\dist\middleware\session.js:137:17)
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\koa-static-cache\index.js:73:16 {
+  code: '404',
+  cause: undefined,
+  status: 404
+}
+2026-07-05 15:51:39.732 ERROR 21920 CoolValidateException: 查询参数[id]不存在
+    at BaseSqliteService.info (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@cool-midway\core\dist\service\sqlite.js:226:19)
+    at KnowledgeFilmService.info (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@cool-midway\core\dist\service\base.js:137:35)
+    at AdminKnowledgeFilmController.info (D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@cool-midway\core\dist\controller\base.js:182:43)
+    at D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\core\dist\common\webGenerator.js:43:61
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\info\dist\middleware\info.middleware.js:35:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\user\middleware\app.js:55:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\log.js:20:13
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\authority.js:67:29
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\dist\modules\base\middleware\translate.js:27:24
+    at async D:\Users\kaifa\Trae_cn260425\cool-admin\backend\node_modules\@midwayjs\i18n\dist\middleware.js:150:17 {
+  status: 1002,
+  statusCode: undefined
+}

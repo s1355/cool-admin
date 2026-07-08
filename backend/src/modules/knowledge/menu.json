@@ -1,0 +1,225 @@
+[
+    {
+        "name": "知识库管理",
+        "router": "/knowledge",
+        "perms": null,
+        "type": 0,
+        "icon": "icon-goods",
+        "orderNum": 10,
+        "viewPath": null,
+        "keepAlive": true,
+        "isShow": true,
+        "childMenus": [
+            {
+                "name": "电影管理",
+                "router": null,
+                "perms": null,
+                "type": 0,
+                "icon": "icon-favor",
+                "orderNum": 1,
+                "viewPath": null,
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "电影分类",
+                        "router": "/knowledge/film-category",
+                        "perms": null,
+                        "type": 1,
+                        "icon": "icon-menu",
+                        "orderNum": 1,
+                        "viewPath": "modules/knowledge/views/film-category/index.vue",
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": [
+                            {
+                                "name": "新增",
+                                "router": null,
+                                "perms": "knowledge:filmCategory:add",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 1,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "删除",
+                                "router": null,
+                                "perms": "knowledge:filmCategory:delete",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 2,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "修改",
+                                "router": null,
+                                "perms": "knowledge:filmCategory:info,knowledge:filmCategory:update",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 3,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "查询",
+                                "router": null,
+                                "perms": "knowledge:filmCategory:page,knowledge:filmCategory:list,knowledge:filmCategory:info",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 4,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电影列表",
+                        "router": "/knowledge/film",
+                        "perms": null,
+                        "type": 1,
+                        "icon": "icon-goods",
+                        "orderNum": 2,
+                        "viewPath": "modules/knowledge/views/film/index.vue",
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": [
+                            {
+                                "name": "新增",
+                                "router": null,
+                                "perms": "knowledge:film:add",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 1,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "删除",
+                                "router": null,
+                                "perms": "knowledge:film:delete",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 2,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "修改",
+                                "router": null,
+                                "perms": "knowledge:film:info,knowledge:film:update",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 3,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "查询",
+                                "router": null,
+                                "perms": "knowledge:film:page,knowledge:film:list,knowledge:film:info",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 4,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            }
+                        ]
+                    },
+                    }
+                ]
+            },
+            {
+                "name": "书籍管理",
+                "router": null,
+                "perms": null,
+                "type": 0,
+                "icon": "icon-goods",
+                "orderNum": 2,
+                "viewPath": null,
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "书籍列表",
+                        "router": "/knowledge/book",
+                        "perms": null,
+                        "type": 1,
+                        "icon": "icon-menu",
+                        "orderNum": 1,
+                        "viewPath": "modules/knowledge/views/book/index.vue",
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": [
+                            {
+                                "name": "新增",
+                                "router": null,
+                                "perms": "knowledge:book:add",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 1,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "删除",
+                                "router": null,
+                                "perms": "knowledge:book:delete",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 2,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "修改",
+                                "router": null,
+                                "perms": "knowledge:book:info,knowledge:book:update",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 3,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "查询",
+                                "router": null,
+                                "perms": "knowledge:book:page,knowledge:book:list,knowledge:book:info",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 4,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

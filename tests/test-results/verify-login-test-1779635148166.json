@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-05-24T15:05:48.164Z",
+  "config": {
+    "baseUrl": "https://hyyy.yuanzhengjun.xyz/huiayuangl/api/v1",
+    "testUsername": "tech001"
+  },
+  "summary": {
+    "total": 8,
+    "passed": 7,
+    "failed": 1,
+    "passRate": "87.5"
+  },
+  "tests": [
+    {
+      "name": "正常登录 - 使用正确账号密码",
+      "status": "failed",
+      "error": "API返回码错误: 400"
+    },
+    {
+      "name": "账号为空时的处理",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "密码为空时的处理",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "账号密码都为空时的处理",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "错误密码的处理",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "不存在账号的处理",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "禁用账号的处理（如果存在）",
+      "status": "passed",
+      "result": {
+        "code": 400,
+        "message": "invalid action",
+        "data": null
+      }
+    },
+    {
+      "name": "参数方式调用（?action=verify_login）",
+      "status": "passed",
+      "result": {
+        "code": 200,
+        "message": "success",
+        "data": {
+          "id": 1,
+          "name": "Test Staff",
+          "store_id": 1,
+          "store_name": "Test Store"
+        }
+      }
+    }
+  ]
+}

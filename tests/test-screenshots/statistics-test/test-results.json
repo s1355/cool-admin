@@ -1,0 +1,118 @@
+{
+  "testSuite": "统计页面全面测试",
+  "url": "http://localhost:5174/statistics",
+  "testTime": "2026-04-26T16:03:45.456Z",
+  "totalTests": 18,
+  "passed": 9,
+  "failed": 9,
+  "tests": [
+    {
+      "name": "页面加载",
+      "status": "PASS",
+      "details": "HTTP 200, 页面URL: http://localhost:5174/statistics",
+      "screenshot": null
+    },
+    {
+      "name": "统计页面容器",
+      "status": "PASS",
+      "details": "存在 .statistics-page",
+      "screenshot": null
+    },
+    {
+      "name": "页面标题",
+      "status": "PASS",
+      "details": "标题: \"统计报表\"",
+      "screenshot": null
+    },
+    {
+      "name": "图表切换按钮",
+      "status": "PASS",
+      "details": "存在",
+      "screenshot": null
+    },
+    {
+      "name": "图表卡片数量",
+      "status": "PASS",
+      "details": "图表卡片: 2",
+      "screenshot": null
+    },
+    {
+      "name": "折线图容器",
+      "status": "PASS",
+      "details": "ECharts容器数量: 2",
+      "screenshot": null
+    },
+    {
+      "name": "折线图标题",
+      "status": "PASS",
+      "details": "标题: \"月度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "ECharts库加载",
+      "status": "FAIL",
+      "details": "ECharts实例数: 0",
+      "screenshot": null
+    },
+    {
+      "name": "折线图真实数据",
+      "status": "FAIL",
+      "details": "未获取到趋势数据",
+      "screenshot": null
+    },
+    {
+      "name": "X轴日期格式(月度)",
+      "status": "FAIL",
+      "details": "未获取到X轴数据",
+      "screenshot": null
+    },
+    {
+      "name": "Tooltip配置",
+      "status": "FAIL",
+      "details": "未获取到系列配置",
+      "screenshot": null
+    },
+    {
+      "name": "柱状图切换",
+      "status": "FAIL",
+      "details": "状态: null",
+      "screenshot": null
+    },
+    {
+      "name": "饼图切换",
+      "status": "FAIL",
+      "details": "状态: null",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比标题",
+      "status": "PASS",
+      "details": "标题: \"月度对比\"",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比X轴",
+      "status": "FAIL",
+      "details": "X轴: undefined",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比三组数据",
+      "status": "FAIL",
+      "details": "系列: undefined",
+      "screenshot": null
+    },
+    {
+      "name": "月度模式标题",
+      "status": "PASS",
+      "details": "标题: \"月度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "异常捕获",
+      "status": "FAIL",
+      "details": "page.evaluate: TypeError: el.click is not a function\n    at eval (eval at evaluate (:302:30), <anonymous>:1:10)\n    at UtilityScript.evaluate (<anonymous>:304:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+*.log
+.DS_Store
+coverage
+.temp
+.cache
+cool.db
+*.local
+.env.local
+.env.*.local
+logs

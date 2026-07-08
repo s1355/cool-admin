@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.env
+.cool-admin/
+.workbuddy/
+.DS_Store
+Thumbs.db
+*.bat
+*.ps1

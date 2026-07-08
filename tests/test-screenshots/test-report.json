@@ -1,0 +1,33 @@
+{
+  "testSuite": "倒序显示修复验证",
+  "testEnv": "http://localhost:5175",
+  "testTime": "2026-04-26T12:55:36.112Z",
+  "results": [
+    {
+      "testCase": "TC-01",
+      "status": "PASS",
+      "detail": "首页最近记录区域存在，内容已提取。截图：d:\\Users\\kaifa\\Trae_cn260425\\test-screenshots\\TC01-homepage-recent-records.png",
+      "timestamp": "2026-04-26T12:55:33.131Z"
+    },
+    {
+      "testCase": "TC-02",
+      "status": "INFO",
+      "detail": "记账页面已加载，未找到明确的账单明细容器。截图：d:\\Users\\kaifa\\Trae_cn260425\\test-screenshots\\TC02-record-page-bills.png",
+      "timestamp": "2026-04-26T12:55:36.099Z"
+    },
+    {
+      "testCase": "TC-03",
+      "status": "WARN",
+      "detail": "未找到添加记录按钮，无法执行添加操作",
+      "timestamp": "2026-04-26T12:55:36.111Z"
+    }
+  ],
+  "screenshots": [
+    "budget.png",
+    "dashboard.png",
+    "records.png",
+    "statistics.png",
+    "TC01-homepage-recent-records.png",
+    "TC02-record-page-bills.png"
+  ]
+}

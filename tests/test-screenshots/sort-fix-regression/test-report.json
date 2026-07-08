@@ -1,0 +1,93 @@
+{
+  "testDate": "2026-04-26T13:52:51.511Z",
+  "environment": {
+    "backendUrl": "http://localhost:3001",
+    "userId": 1,
+    "accountId": 3
+  },
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "passRate": "100.0%"
+  },
+  "testCases": [
+    {
+      "id": 1,
+      "name": "添加5条支出记录",
+      "status": "PASS",
+      "details": "IDs: 132, 133, 134, 135, 136",
+      "timestamp": "2026-04-26T13:52:43.351Z"
+    },
+    {
+      "id": 2,
+      "name": "添加5条收入记录",
+      "status": "PASS",
+      "details": "IDs: 137, 138, 139, 140, 141",
+      "timestamp": "2026-04-26T13:52:49.396Z"
+    },
+    {
+      "id": 3,
+      "name": "API按createdAt倒序",
+      "status": "PASS",
+      "details": "共13条记录",
+      "timestamp": "2026-04-26T13:52:49.402Z"
+    },
+    {
+      "id": 4,
+      "name": "最新记录在API第一位",
+      "status": "PASS",
+      "details": "预期ID:141, 实际ID:141",
+      "timestamp": "2026-04-26T13:52:49.402Z"
+    },
+    {
+      "id": 5,
+      "name": "首页最近5条按createdAt倒序",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2026-04-26T13:52:49.403Z"
+    },
+    {
+      "id": 6,
+      "name": "支出筛选后按createdAt倒序",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2026-04-26T13:52:49.409Z"
+    },
+    {
+      "id": 7,
+      "name": "收入筛选后按createdAt倒序",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2026-04-26T13:52:49.412Z"
+    },
+    {
+      "id": 8,
+      "name": "同秒记录排序稳定性",
+      "status": "PASS",
+      "details": "记录1位置:2, 记录2位置:1 (同秒允许顺序不定)",
+      "timestamp": "2026-04-26T13:52:49.650Z"
+    },
+    {
+      "id": 9,
+      "name": "删除记录",
+      "status": "PASS",
+      "details": "ID:134",
+      "timestamp": "2026-04-26T13:52:49.754Z"
+    },
+    {
+      "id": 10,
+      "name": "删除后剩余记录排序正确",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2026-04-26T13:52:49.758Z"
+    },
+    {
+      "id": 11,
+      "name": "跨天记录排序正确",
+      "status": "PASS",
+      "details": "今天:15条 | 昨天:0条",
+      "timestamp": "2026-04-26T13:52:49.876Z"
+    }
+  ]
+}

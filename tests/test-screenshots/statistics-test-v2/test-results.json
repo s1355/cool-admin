@@ -1,0 +1,172 @@
+{
+  "testSuite": "统计页面全面测试 V2",
+  "url": "http://localhost:5174/statistics",
+  "testTime": "2026-04-26T16:19:30.256Z",
+  "totalTests": 27,
+  "passed": 19,
+  "failed": 8,
+  "tests": [
+    {
+      "name": "页面加载",
+      "status": "PASS",
+      "details": "HTTP 200, URL: http://localhost:5174/statistics",
+      "screenshot": null
+    },
+    {
+      "name": "统计页面容器",
+      "status": "PASS",
+      "details": "存在 .statistics-page",
+      "screenshot": null
+    },
+    {
+      "name": "页面标题",
+      "status": "PASS",
+      "details": "标题: \"统计报表\"",
+      "screenshot": null
+    },
+    {
+      "name": "图表切换按钮",
+      "status": "PASS",
+      "details": "按钮: [\"折线图\",\"柱状图\",\"饼图\"]",
+      "screenshot": null
+    },
+    {
+      "name": "图表卡片数量",
+      "status": "PASS",
+      "details": "图表卡片: 2",
+      "screenshot": null
+    },
+    {
+      "name": "导出按钮",
+      "status": "PASS",
+      "details": "存在导出按钮",
+      "screenshot": null
+    },
+    {
+      "name": "折线图标题",
+      "status": "PASS",
+      "details": "标题: \"月度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "ECharts Canvas渲染",
+      "status": "PASS",
+      "details": "Canvas数量: 2",
+      "screenshot": null
+    },
+    {
+      "name": "X轴日期格式(日)",
+      "status": "FAIL",
+      "details": "日期标签: []",
+      "screenshot": null
+    },
+    {
+      "name": "Y轴数值格式化",
+      "status": "FAIL",
+      "details": "Y轴标签: []",
+      "screenshot": null
+    },
+    {
+      "name": "Tooltip悬停显示",
+      "status": "FAIL",
+      "details": "Tooltip: \"null\"",
+      "screenshot": null
+    },
+    {
+      "name": "图例显示",
+      "status": "FAIL",
+      "details": "图例项: []",
+      "screenshot": null
+    },
+    {
+      "name": "柱状图切换",
+      "status": "PASS",
+      "details": "标题: \"月度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "柱状图按钮激活",
+      "status": "PASS",
+      "details": "active状态: true",
+      "screenshot": null
+    },
+    {
+      "name": "饼图标题",
+      "status": "PASS",
+      "details": "标题: \"支出构成\"",
+      "screenshot": null
+    },
+    {
+      "name": "饼图按钮激活",
+      "status": "PASS",
+      "details": "active状态: true",
+      "screenshot": null
+    },
+    {
+      "name": "饼图Canvas渲染",
+      "status": "FAIL",
+      "details": "饼图Canvas数量: 0",
+      "screenshot": null
+    },
+    {
+      "name": "饼图图例项",
+      "status": "PASS",
+      "details": "图例: [{\"label\":\"交通\",\"value\":\"77%\"},{\"label\":\"购物\",\"value\":\"23%\"}]",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比标题",
+      "status": "PASS",
+      "details": "标题: \"月度对比\"",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比X轴月份",
+      "status": "FAIL",
+      "details": "月份标签: []",
+      "screenshot": null
+    },
+    {
+      "name": "月度对比三组数据",
+      "status": "FAIL",
+      "details": "图例: []",
+      "screenshot": null
+    },
+    {
+      "name": "月度模式标题",
+      "status": "PASS",
+      "details": "标题: \"月度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "年度模式标题",
+      "status": "PASS",
+      "details": "标题: \"年度收支趋势\"",
+      "screenshot": null
+    },
+    {
+      "name": "年度X轴月份标签",
+      "status": "FAIL",
+      "details": "X轴: []",
+      "screenshot": null
+    },
+    {
+      "name": "导出Toast显示",
+      "status": "PASS",
+      "details": "Toast可见: true, 文本: \"导出成功\"",
+      "screenshot": null
+    },
+    {
+      "name": "无障碍属性",
+      "status": "PASS",
+      "details": "tablist: true, tabs: 3",
+      "screenshot": null
+    },
+    {
+      "name": "控制台错误检查",
+      "status": "PASS",
+      "details": "无JS错误",
+      "screenshot": null
+    }
+  ]
+}
