@@ -16,7 +16,7 @@ export default {
         password: '7dz2ssmWSNWfsAbK',
         database: 'cool-admin',
         // 首次建表用true，后续必须关掉
-        synchronize: false,
+        synchronize: true,
         // 打印日志
         logging: true,
         // 字符集
@@ -34,7 +34,7 @@ export default {
     // 启用 EPS，前端需要获取 API 路由映射
     eps: true,
     // 首次运行需要 true 来导入种子数据（admin用户、菜单等），导入成功后改回 false
-    initDB: false,
+    initDB: true,
     initJudge: 'db',
     initMenu: true,
     // 禁用国际化翻译，消除 BaseTranslateMiddleware 无效错误
