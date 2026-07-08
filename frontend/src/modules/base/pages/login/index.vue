@@ -116,16 +116,6 @@ if (import.meta.env.MODE == 'demo') {
 // 		toLogin();
 // 	}, 800);
 // });
-	// 先清除旧 token，防止路由重定向
-	user.clear();
-	form.username = 'admin';
-	form.password = '123456';
-	form.captchaId = 'auto';
-	form.verifyCode = '0000';
-	setTimeout(() => {
-		toLogin();
-	}, 800);
-});
 
 // 登录
 async function toLogin() {
