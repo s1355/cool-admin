@@ -71,6 +71,8 @@ export default ({ mode }: ConfigEnv): UserConfig => {
 			drop: isDev ? [] : ['console', 'debugger']
 		},
 		build: {
+			// 宝塔会在网站目录创建 .user.ini，Vite 清理目录时会报错，关闭自动清理
+			emptyOutDir: false,
 			minify: 'esbuild',
 			// terserOptions: {
 			// 	compress: {
