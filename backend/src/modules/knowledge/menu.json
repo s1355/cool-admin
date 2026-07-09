@@ -157,6 +157,67 @@
                 "isShow": true,
                 "childMenus": [
                     {
+                        "name": "书籍分类",
+                        "router": "/knowledge/book-category",
+                        "perms": null,
+                        "type": 1,
+                        "icon": "icon-menu",
+                        "orderNum": 1,
+                        "viewPath": "modules/knowledge/views/book-category/index.vue",
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": [
+                            {
+                                "name": "新增",
+                                "router": null,
+                                "perms": "knowledge:bookCategory:add",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 1,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "删除",
+                                "router": null,
+                                "perms": "knowledge:bookCategory:delete",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 2,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "修改",
+                                "router": null,
+                                "perms": "knowledge:bookCategory:info,knowledge:bookCategory:update",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 3,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "查询",
+                                "router": null,
+                                "perms": "knowledge:bookCategory:page,knowledge:bookCategory:list,knowledge:bookCategory:info",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 4,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            }
+                        ]
+                    },
+                    {
                         "name": "书籍列表",
                         "router": "/knowledge/book",
                         "perms": null,
