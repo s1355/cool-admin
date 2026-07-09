@@ -19,8 +19,8 @@ export default options => {
     hooks: {
       // 文件上传
       upload: {
-        // 地址前缀
-        domain: `http://127.0.0.1:${options?.app?.getConfig('koa.port')}`,
+        // 地址前缀（可通过环境变量 UPLOAD_DOMAIN 覆盖）
+        domain: process.env.UPLOAD_DOMAIN || `https://zhishi.yuanzhengjun.xyz`,
       },
     },
   } as ModuleConfig;
