@@ -35,7 +35,7 @@
                             {
                                 "name": "新增",
                                 "router": null,
-                                "perms": "knowledge:filmCategory:add",
+                                "perms": "knowledge:film-category:add",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 1,
@@ -47,7 +47,7 @@
                             {
                                 "name": "删除",
                                 "router": null,
-                                "perms": "knowledge:filmCategory:delete",
+                                "perms": "knowledge:film-category:delete",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 2,
@@ -59,7 +59,7 @@
                             {
                                 "name": "修改",
                                 "router": null,
-                                "perms": "knowledge:filmCategory:info,knowledge:filmCategory:update",
+                                "perms": "knowledge:film-category:info,knowledge:film-category:update",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 3,
@@ -71,7 +71,7 @@
                             {
                                 "name": "查询",
                                 "router": null,
-                                "perms": "knowledge:filmCategory:page,knowledge:filmCategory:list,knowledge:filmCategory:info",
+                                "perms": "knowledge:film-category:page,knowledge:film-category:list,knowledge:film-category:info",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 4,
@@ -170,7 +170,7 @@
                             {
                                 "name": "新增",
                                 "router": null,
-                                "perms": "knowledge:bookCategory:add",
+                                "perms": "knowledge:book-category:add",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 1,
@@ -182,7 +182,7 @@
                             {
                                 "name": "删除",
                                 "router": null,
-                                "perms": "knowledge:bookCategory:delete",
+                                "perms": "knowledge:book-category:delete",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 2,
@@ -194,7 +194,7 @@
                             {
                                 "name": "修改",
                                 "router": null,
-                                "perms": "knowledge:bookCategory:info,knowledge:bookCategory:update",
+                                "perms": "knowledge:book-category:info,knowledge:book-category:update",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 3,
@@ -206,7 +206,7 @@
                             {
                                 "name": "查询",
                                 "router": null,
-                                "perms": "knowledge:bookCategory:page,knowledge:bookCategory:list,knowledge:bookCategory:info",
+                                "perms": "knowledge:book-category:page,knowledge:book-category:list,knowledge:book-category:info",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 4,
