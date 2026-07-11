@@ -18,8 +18,8 @@ const getKeys = () => {
  * @returns
  */
 export const pDataPath = () => {
-  // 使用项目本地目录而非 os.homedir()，避免在 Windows 上出现 /root/ 等无效路径
-  const dirPath = path.join(__dirname, '..', '.cool-admin', md5(getKeys()));
+  // 使用 backend 本地目录而非 os.homedir() 或 dist/，避免跨平台路径权限问题和 build 清理
+  const dirPath = path.join(__dirname, '../..', '.cool-admin', md5(getKeys()));
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
