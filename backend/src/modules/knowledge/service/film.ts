@@ -161,6 +161,26 @@ export class KnowledgeFilmService extends BaseService {
   }
 
   /**
+   * 批量修改电影分类
+   * @param ids 电影 ID 数组
+   * @param categoryId 目标分类 ID
+   */
+  async batchUpdateCategory(ids: number[], categoryId: number) {
+    if (!ids || ids.length === 0) {
+      throw new Error('请选择要修改的数据');
+    }
+    if (!categoryId) {
+      throw new Error('请选择目标分类');
+    }
+    await this.knowledgeFilmEntity
+      .createQueryBuilder()
+      .update()
+      .set({ categoryId })
+      .whereInIds(ids)
+      .execute();
+  }
+
+  /**
    * API: importFilms - 批量导入电影数据
    * - 业务层查重：检查同名电影是否已存在，已存在则跳过
    * - 将 Excel 导入的数据逐条插入数据库

@@ -108,6 +108,26 @@ export class KnowledgeBookService extends BaseService {
     return super.update(safeParams);
   }
 
+  /**
+   * 批量修改书籍分类
+   * @param ids 书籍 ID 数组
+   * @param categoryId 目标分类 ID
+   */
+  async batchUpdateCategory(ids: number[], categoryId: number) {
+    if (!ids || ids.length === 0) {
+      throw new Error('请选择要修改的数据');
+    }
+    if (!categoryId) {
+      throw new Error('请选择目标分类');
+    }
+    await this.knowledgeBookEntity
+      .createQueryBuilder()
+      .update()
+      .set({ categoryId })
+      .whereInIds(ids)
+      .execute();
+  }
+
   async importBooks(books: any[]) {
     let success = 0;
     let fail = 0;

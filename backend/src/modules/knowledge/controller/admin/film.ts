@@ -24,4 +24,15 @@ export class AdminKnowledgeFilmController extends BaseController {
   async importFilms(@Body() films: any[]) {
     return this.ok(await this.service.importFilms(films));
   }
+
+  /**
+   * API: POST /admin/knowledge/film/batch-update-category - 批量修改电影分类
+   * @param body.ids 电影 ID 数组
+   * @param body.categoryId 目标分类 ID
+   */
+  @Post('/batch-update-category', { summary: '批量修改电影分类' })
+  async batchUpdateCategory(@Body() body: { ids: number[]; categoryId: number }) {
+    await this.service.batchUpdateCategory(body.ids, body.categoryId);
+    return this.ok();
+  }
 }

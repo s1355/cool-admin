@@ -8,6 +8,14 @@
 			<cl-add-btn />
 			<!-- 批量删除按钮 -->
 			<cl-multi-delete-btn />
+			<!-- 批量修改分类 -->
+			<el-button
+				type="warning"
+				:disabled="selection.length === 0"
+				@click="handleBatchUpdateCategory"
+			>
+				批量修改分类
+			</el-button>
 			<cl-flex1 />
 			<!-- 导入按钮 -->
 			<cl-import-btn
@@ -58,6 +66,31 @@
 
 		<!-- 新增、编辑弹窗 -->
 		<cl-upsert ref="Upsert" />
+
+		<!-- 批量修改分类弹窗 -->
+		<el-dialog v-model="batchCategoryVisible" title="批量修改分类" :width="400" @close="batchCategoryId = null">
+			<el-form>
+				<el-form-item label="目标分类" required>
+					<el-select
+						v-model="batchCategoryId"
+						placeholder="请选择分类"
+						clearable
+						style="width: 100%"
+					>
+						<el-option
+							v-for="item in categoryOptions"
+							:key="item.value"
+							:label="item.label"
+							:value="item.value"
+						/>
+					</el-select>
+				</el-form-item>
+			</el-form>
+			<template #footer>
+				<el-button @click="batchCategoryVisible = false">取消</el-button>
+				<el-button type="primary" :loading="batchLoading" @click="confirmBatchUpdateCategory">确认修改</el-button>
+			</template>
+		</el-dialog>
 	</cl-crud>
 </template>
 
@@ -96,6 +129,12 @@ const priorityOptions = reactive([
 
 // 分类选项 - 从接口获取
 const categoryOptions = ref<any[]>([]);
+
+// 批量修改分类
+const selection = ref<any[]>([]);
+const batchCategoryVisible = ref(false);
+const batchCategoryId = ref<number | null>(null);
+const batchLoading = ref(false);
 
 // API: service.knowledge.book - 书籍服务（由 EPS 自动生成，对应后端 /admin/knowledge/book）
 
@@ -141,6 +180,46 @@ function loadCategoryOptions() {
 	});
 }
 
+// 批量修改分类 - 打开弹窗
+function handleBatchUpdateCategory() {
+	if (selection.value.length === 0) {
+		ElMessage.warning('请先选择要修改的书籍');
+		return;
+	}
+	batchCategoryVisible.value = true;
+}
+
+// 批量修改分类 - 确认提交
+async function confirmBatchUpdateCategory() {
+	if (!batchCategoryId.value) {
+		ElMessage.warning('请选择目标分类');
+		return;
+	}
+	if (selection.value.length === 0) {
+		ElMessage.warning('请先选择要修改的书籍');
+		return;
+	}
+	batchLoading.value = true;
+	try {
+		await service.knowledge.book.request({
+			url: '/batch-update-category',
+			method: 'POST',
+			data: {
+				ids: selection.value.map((row: any) => row.id),
+				categoryId: batchCategoryId.value
+			}
+		});
+		ElMessage.success('批量修改分类成功');
+		batchCategoryVisible.value = false;
+		batchCategoryId.value = null;
+		Crud.value?.refresh();
+	} catch (e: any) {
+		ElMessage.error(e.message || '修改失败');
+	} finally {
+		batchLoading.value = false;
+	}
+}
+
 // API: POST /admin/knowledge/book/import - 批量导入书籍数据
 
 /**
@@ -172,6 +251,9 @@ async function onImportSubmit(data: { list: any[]; file: File }, { done, close }
 
 // cl-table 配置 - 表格列定义
 const Table = useTable({
+	onSelectionChange(list: any[]) {
+		selection.value = list;
+	},
 	columns: [
 		{
 			// 多选框列

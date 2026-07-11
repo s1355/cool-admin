@@ -24,6 +24,17 @@ export class AdminKnowledgeBookController extends BaseController {
     return this.ok(await this.service.importBooks(books));
   }
 
+  /**
+   * API: POST /admin/knowledge/book/batch-update-category - 批量修改书籍分类
+   * @param body.ids 书籍 ID 数组
+   * @param body.categoryId 目标分类 ID
+   */
+  @Post('/batch-update-category', { summary: '批量修改书籍分类' })
+  async batchUpdateCategory(@Body() body: { ids: number[]; categoryId: number }) {
+    await this.service.batchUpdateCategory(body.ids, body.categoryId);
+    return this.ok();
+  }
+
   @CoolTag(TagTypes.IGNORE_TOKEN)
   @Get('/proxy-cover', { summary: '代理获取书籍封面，解决防盗链' })
   async proxyCover(@Query('url') url: string) {
