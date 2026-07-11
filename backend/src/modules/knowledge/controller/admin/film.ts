@@ -26,11 +26,14 @@ export class AdminKnowledgeFilmController extends BaseController {
   }
 
   /**
-   * API: POST /admin/knowledge/film/batch-update-category - 批量修改电影分类
+   * API: POST /admin/knowledge/film/batchUpdateCategory - 批量修改电影分类
+   * 注意：路由必须用驼峰，不能用连字符。@cool-vue/vite-plugin 在生成前端 service 树时
+   * 会跳过含连字符的方法（dist/index.js 中 !/[-:]/g.test(n) 判断），导致该接口无法出现在
+   * 菜单管理「权限」级联选择器中，非 admin 用户访问会被 authority 中间件拦截返回 403。
    * @param body.ids 电影 ID 数组
    * @param body.categoryId 目标分类 ID
    */
-  @Post('/batch-update-category', { summary: '批量修改电影分类' })
+  @Post('/batchUpdateCategory', { summary: '批量修改电影分类' })
   async batchUpdateCategory(@Body() body: { ids: number[]; categoryId: number }) {
     await this.service.batchUpdateCategory(body.ids, body.categoryId);
     return this.ok();

@@ -25,11 +25,12 @@ export class AdminKnowledgeBookController extends BaseController {
   }
 
   /**
-   * API: POST /admin/knowledge/book/batch-update-category - 批量修改书籍分类
+   * API: POST /admin/knowledge/book/batchUpdateCategory - 批量修改书籍分类
+   * 注意：路由必须用驼峰，不能用连字符。原因同 film 控制器（@cool-vue/vite-plugin 跳过连字符方法）。
    * @param body.ids 书籍 ID 数组
    * @param body.categoryId 目标分类 ID
    */
-  @Post('/batch-update-category', { summary: '批量修改书籍分类' })
+  @Post('/batchUpdateCategory', { summary: '批量修改书籍分类' })
   async batchUpdateCategory(@Body() body: { ids: number[]; categoryId: number }) {
     await this.service.batchUpdateCategory(body.ids, body.categoryId);
     return this.ok();

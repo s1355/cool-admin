@@ -202,7 +202,7 @@ async function confirmBatchUpdateCategory() {
 	batchLoading.value = true;
 	try {
 		await service.knowledge.book.request({
-			url: '/batch-update-category',
+			url: '/batchUpdateCategory',
 			method: 'POST',
 			data: {
 				ids,

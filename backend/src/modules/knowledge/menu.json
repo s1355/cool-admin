@@ -144,7 +144,7 @@
                             {
                                 "name": "批量修改分类",
                                 "router": null,
-                                "perms": "knowledge:film:batch-update-category",
+                                "perms": "knowledge:film:batchUpdateCategory",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 5,
@@ -291,7 +291,7 @@
                             {
                                 "name": "批量修改分类",
                                 "router": null,
-                                "perms": "knowledge:book:batch-update-category",
+                                "perms": "knowledge:book:batchUpdateCategory",
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 5,
