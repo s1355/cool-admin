@@ -1,5 +1,4 @@
 import * as path from 'path';
-import * as os from 'os';
 import * as md5 from 'md5';
 import * as fs from 'fs';
 
@@ -19,7 +18,8 @@ const getKeys = () => {
  * @returns
  */
 export const pDataPath = () => {
-  const dirPath = path.join(os.homedir(), '.cool-admin', md5(getKeys()));
+  // 使用项目本地目录而非 os.homedir()，避免在 Windows 上出现 /root/ 等无效路径
+  const dirPath = path.join(__dirname, '..', '.cool-admin', md5(getKeys()));
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
