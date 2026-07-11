@@ -140,6 +140,18 @@
                                 "keepAlive": false,
                                 "isShow": true,
                                 "childMenus": []
+                            },
+                            {
+                                "name": "批量修改分类",
+                                "router": null,
+                                "perms": "knowledge:film:batch-update-category",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 5,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
                             }
                         ]
                     }
@@ -271,6 +283,18 @@
                                 "type": 2,
                                 "icon": null,
                                 "orderNum": 4,
+                                "viewPath": null,
+                                "keepAlive": false,
+                                "isShow": true,
+                                "childMenus": []
+                            },
+                            {
+                                "name": "批量修改分类",
+                                "router": null,
+                                "perms": "knowledge:book:batch-update-category",
+                                "type": 2,
+                                "icon": null,
+                                "orderNum": 5,
                                 "viewPath": null,
                                 "keepAlive": false,
                                 "isShow": true,
