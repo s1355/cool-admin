@@ -62,5 +62,9 @@ export const pSqlitePath = () => {
  * @returns
  */
 export const pCachePath = () => {
-  return path.join(pDataPath(), 'cache');
+  const cachePath = path.join(pDataPath(), 'cache');
+  if (!fs.existsSync(cachePath)) {
+    fs.mkdirSync(cachePath, { recursive: true });
+  }
+  return cachePath;
 };
