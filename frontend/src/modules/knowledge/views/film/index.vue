@@ -11,7 +11,7 @@
 			<!-- 批量修改分类 -->
 			<el-button
 				type="warning"
-				:disabled="selection.length === 0"
+				:disabled="!Table?.selection?.length"
 				@click="handleBatchUpdateCategory"
 			>
 				批量修改分类
@@ -130,7 +130,6 @@ const watchedOptions = reactive([
 const categoryOptions = ref<any[]>([]);
 
 // 批量修改分类
-const selection = ref<any[]>([]);
 const batchCategoryVisible = ref(false);
 const batchCategoryId = ref<number | null>(null);
 const batchLoading = ref(false);
@@ -209,7 +208,7 @@ function loadCategoryOptions() {
 
 // 批量修改分类 - 打开弹窗
 function handleBatchUpdateCategory() {
-	if (selection.value.length === 0) {
+	if (!Table.value?.selection?.length) {
 		ElMessage.warning('请先选择要修改的电影');
 		return;
 	}
@@ -222,7 +221,8 @@ async function confirmBatchUpdateCategory() {
 		ElMessage.warning('请选择目标分类');
 		return;
 	}
-	if (selection.value.length === 0) {
+	const ids = Table.value?.selection?.map((row: any) => row.id);
+	if (!ids || ids.length === 0) {
 		ElMessage.warning('请先选择要修改的电影');
 		return;
 	}
@@ -232,7 +232,7 @@ async function confirmBatchUpdateCategory() {
 			url: '/batch-update-category',
 			method: 'POST',
 			data: {
-				ids: selection.value.map((row: any) => row.id),
+				ids,
 				categoryId: batchCategoryId.value
 			}
 		});
@@ -249,9 +249,6 @@ async function confirmBatchUpdateCategory() {
 
 // cl-table 配置 - 表格列定义
 const Table = useTable({
-	onSelectionChange(list: any[]) {
-		selection.value = list;
-	},
 	columns: [
 		{
 			// 多选框列
